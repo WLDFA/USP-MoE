@@ -1,0 +1,42 @@
+data:
+  data_keys: ['Marin', 'Placer']
+
+  Marin:
+    dataset_path: ../Data/1/Marin/data.npy
+    adjacency_matrix_path: ../Data/1/Marin/adj.npy
+    node_num: 140
+    speed_mean: 183.42261664746545
+    speed_std: 152.29141937052947
+
+  Placer:
+    dataset_path: ../Data/2/Placer/data.npy
+    adjacency_matrix_path: ../Data/2/Placer/adj.npy
+    node_num: 69
+    speed_mean: 160.3933886551348
+    speed_std: 130.2793702169158
+
+
+
+
+task:
+  his_num: 12
+  pred_num: 6
+  batch_size: 32   
+  test_batch_size: 32
+  task_num: 2
+
+model:
+  node_feature_dim: 2
+  edge_feature_dim: 4
+  message_dim: 1 #STGCN为1，GWN为2
+  hidden_dim: 16
+  output_dim: 1
+  meta_dim: 16
+  update_lr: 0.0005 
+  meta_lr: 0.001 # 0.0001
+  loss_lambda: 1.5
+  update_step: 5
+  update_step_test: 10
+  tp: True
+  sp: True
+  

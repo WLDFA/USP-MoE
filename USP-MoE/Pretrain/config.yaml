@@ -1,0 +1,60 @@
+data:
+  data_keys: ['Marin', 'Placer']
+
+  Marin:
+    dataset_path: ../Data/1/Marin/data.npy
+    adjacency_matrix_path: ../Data/1/Marin/adj.npy
+    node_num: 140
+    speed_mean: 183.42261664746545
+    speed_std: 152.29141937052947
+
+  Placer:
+    dataset_path: ../Data/2/Placer/data.npy
+    adjacency_matrix_path: ../Data/2/Placer/adj.npy
+    node_num: 69
+    speed_mean: 160.3933886551348
+    speed_std: 130.2793702169158
+
+
+
+
+task:
+  his_num: 12
+  pred_num: 6
+  batch_size: 64   
+  test_batch_size: 64
+  task_num: 2
+
+model:
+  node_feature_dim: 2
+  edge_feature_dim: 4
+  message_dim: 1
+  hidden_dim: 16
+  output_dim: 1
+  meta_dim: 16
+  update_lr: 0.0005 
+  meta_lr: 0.001 # 0.0001
+  loss_lambda: 1.5
+  update_step: 5
+  update_step_test: 10
+  tp: True
+  sp: True
+  num_feat: 1
+  num_hidden: 32
+  node_hidden: 12
+  time_emb_dim: 12
+  layer: 5
+  k_t: 3
+  k_s: 2
+  gap: 6
+  cl_epoch: 3
+  warm_epoch: 30
+  tpd: 96
+  lrate: 0.001
+  wdecay: 0.00001
+  dropout: 0.1
+  clip_grad_value: 5.0
+  use_pre: False
+  dy_graph: True
+  sta_graph: True
+  seq_len: 12
