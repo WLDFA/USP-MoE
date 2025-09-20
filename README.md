@@ -1,8 +1,6 @@
 # USP-MoE
-## Addressing the Challenge of Spatiotemporal Data Scarcity:Cross-City Traffic Flow Prediction Guided by Urban Spatial Patterns
 
-
-This paper proposes a cross-city traffic flow prediction method guided by urban spatial patterns, named USP-MoE. The method utilizes a geospatial network to compute the spatial representations of nodes and identifies urban spatial patterns by combining clustering with a traffic flow feedback mechanism. For data-rich source cities, independent expert models are trained for different urban spatial patterns to construct a mixture of experts model aimed at parameter generation. Building on this, the initial parameters of the prediction model for the data-scarce target city are generated based on its specific spatial patterns. These parameters are then fine-tuned through a spatiotemporal graph enhancement strategy to achieve accurate traffic flow prediction and model generalization. 
+This paper proposes a cross-city traffic flow prediction method guided by urban spatial patterns, named USP-MoE. 
 
 
 ## Installation
